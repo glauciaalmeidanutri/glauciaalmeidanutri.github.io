@@ -25,21 +25,21 @@
   html{-webkit-text-size-adjust:100%}
   body{font-family:'Manrope',system-ui,sans-serif;color:var(--tinta);background:var(--fundo);min-height:100vh;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:420px;margin:0 auto;padding:36px 16px 28px}
+  .wrap{max-width:440px;margin:0 auto;padding:36px 16px 30px}
 
   /* ===== topo ===== */
   header{text-align:center}
-  .logo{display:block;width:156px;margin:0 auto}
-  .papel{margin-top:14px;font-family:'Gilda Display',Georgia,serif;font-size:15px;color:var(--tinta)}
+  .logo{display:block;width:200px;margin:0 auto}
+  .papel{margin-top:16px;font-family:'Gilda Display',Georgia,serif;font-size:19px;color:var(--tinta)}
   .papel span{color:var(--laranja);padding:0 6px}
   .crn{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:999px;border:1px solid var(--linha);background:#fff;
-       font-size:9px;font-weight:700;letter-spacing:.2em;color:var(--cinza)}
-  .divisor{display:flex;align-items:center;gap:12px;margin:24px 2px 16px;font-size:9px;font-weight:700;letter-spacing:.24em;color:#9aa09b;text-transform:uppercase}
+       font-size:10.5px;font-weight:700;letter-spacing:.2em;color:var(--cinza)}
+  .divisor{display:flex;align-items:center;gap:12px;margin:28px 2px 20px;font-size:10px;font-weight:700;letter-spacing:.24em;color:#9aa09b;text-transform:uppercase}
   .divisor::before,.divisor::after{content:"";flex:1;height:1px;background:var(--linha)}
 
   /* ===== cartões ===== */
-  .links{display:flex;flex-direction:column;gap:12px}
-  .card{position:relative;display:block;height:152px;border-radius:var(--raio);overflow:hidden;isolation:isolate;background:#fff;
+  .links{display:flex;flex-direction:column;gap:16px}
+  .card{position:relative;display:block;height:232px;border-radius:24px;overflow:hidden;isolation:isolate;background:#fff;
         border:1px solid var(--linha);box-shadow:0 1px 2px rgba(34,39,34,.04);
         transition:transform .25s ease, box-shadow .25s ease}
   .card:hover{transform:translateY(-2px);box-shadow:0 14px 28px -18px rgba(34,39,34,.45)}
@@ -47,18 +47,18 @@
   .card:focus-visible{outline:2px solid var(--verde-esc);outline-offset:3px}
 
   /* foto: mesma altura e cabeça sempre no mesmo ponto */
-  .pessoa{position:absolute;z-index:1;top:10px;height:244px;width:auto;left:calc(100% - var(--x));pointer-events:none}
+  .pessoa{position:absolute;z-index:1;top:14px;height:330px;width:auto;left:calc(100% - var(--x));pointer-events:none}
   .veu{position:absolute;inset:0;z-index:2;pointer-events:none}
 
-  .txt{position:relative;z-index:3;height:100%;width:57%;padding:var(--pad) 0 16px var(--pad);display:flex;flex-direction:column}
-  .kicker{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
-  .card h2{margin-top:6px;font-family:'Gilda Display',Georgia,serif;font-weight:400;font-size:22px;line-height:1.05}
-  .card p{margin-top:6px;font-size:11.5px;text-wrap:pretty;line-height:1.4;font-weight:500}
+  .txt{position:relative;z-index:3;height:100%;width:56%;padding:24px 0 22px 22px;display:flex;flex-direction:column}
+  .kicker{font-size:10px;font-weight:700;letter-spacing:.16em;white-space:nowrap;text-transform:uppercase}
+  .card h2{margin-top:8px;font-family:'Gilda Display',Georgia,serif;font-weight:400;font-size:29px;line-height:1.04}
+  .card p{margin-top:10px;font-size:13.5px;text-wrap:pretty;line-height:1.45;font-weight:500}
   .card p strong{font-weight:700}
-  .cta{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600}
-  .cta i{display:grid;place-items:center;width:20px;height:20px;border-radius:6px;font-style:normal;transition:transform .25s}
+  .cta{margin-top:auto;white-space:nowrap;display:inline-flex;align-items:center;gap:12px;font-size:13.5px;font-weight:600}
+  .cta i{display:grid;place-items:center;width:28px;height:28px;border-radius:8px;font-style:normal;transition:transform .25s}
   .card:hover .cta i{transform:translate(2px,-2px)}
-  .cta i svg{width:9px;height:9px}
+  .cta i svg{width:12px;height:12px}
 
   /* tons — claros alternando com coloridos suaves; branco sempre atrás da foto */
   .claro .veu{background:linear-gradient(90deg,var(--t1) 0%,var(--t2) 42%,rgba(255,255,255,.7) 56%,rgba(255,255,255,0) 68%)}
@@ -83,35 +83,35 @@
   .cena{position:absolute;z-index:1;top:0;right:0;height:100%;width:68%;object-fit:cover;object-position:62% 50%}
 
   /* mockup dos ebooks */
-  .livros{position:absolute;z-index:1;right:22px;top:50%;width:120px;height:120px;transform:translateY(-50%)}
-  .livro{position:absolute;width:66px;height:92px;border-radius:2px 6px 6px 2px;padding:10px 6px 6px 10px;color:#fff;
+  .livros{position:absolute;z-index:1;right:26px;top:50%;width:150px;height:150px;transform:translateY(-50%)}
+  .livro{position:absolute;width:84px;height:116px;border-radius:2px 6px 6px 2px;padding:10px 6px 6px 10px;color:#fff;
          box-shadow:8px 10px 18px -8px rgba(80,40,20,.45), inset 4px 0 0 rgba(0,0,0,.1), inset 5px 0 0 rgba(255,255,255,.15)}
   .livro small{display:block;font-size:5px;font-weight:700;letter-spacing:.2em;opacity:.8}
-  .livro b{display:block;margin-top:4px;font-family:'Gilda Display',serif;font-weight:400;font-size:10.5px;line-height:1.05}
-  .lv1{left:0;top:22px;background:linear-gradient(160deg,#e9b493,#c27c58);transform:rotate(-12deg)}
-  .lv2{left:24px;top:10px;background:linear-gradient(160deg,#fff,#f3efe9);color:var(--terra);transform:rotate(-3deg);z-index:2;border:1px solid #eee}
-  .lv3{left:48px;top:20px;background:linear-gradient(160deg,#9cc58e,#6d9266);transform:rotate(8deg);z-index:3}
-  .selo5{position:absolute;z-index:4;right:-6px;top:-4px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;text-align:center;
-         background:#fff;color:var(--terra);font-family:'Gilda Display',serif;font-size:16px;line-height:.8;box-shadow:0 6px 14px -6px rgba(80,40,20,.5)}
-  .selo5 small{display:block;font-family:'Manrope';font-size:5px;font-weight:700;letter-spacing:.12em}
+  .livro b{display:block;margin-top:5px;font-family:'Gilda Display',serif;font-weight:400;font-size:13px;line-height:1.05}
+  .lv1{left:0;top:28px;background:linear-gradient(160deg,#e9b493,#c27c58);transform:rotate(-12deg)}
+  .lv2{left:30px;top:12px;background:linear-gradient(160deg,#fff,#f3efe9);color:var(--terra);transform:rotate(-3deg);z-index:2;border:1px solid #eee}
+  .lv3{left:60px;top:26px;background:linear-gradient(160deg,#9cc58e,#6d9266);transform:rotate(8deg);z-index:3}
+  .selo5{position:absolute;z-index:4;right:-8px;top:-6px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;text-align:center;
+         background:#fff;color:var(--terra);font-family:'Gilda Display',serif;font-size:20px;line-height:.8;box-shadow:0 6px 14px -6px rgba(80,40,20,.5)}
+  .selo5 small{display:block;font-family:'Manrope';font-size:6px;font-weight:700;letter-spacing:.12em}
 
-  .preco{display:inline-block;margin-left:2px;padding:1px 7px 2px;border-radius:5px;background:#fff;color:var(--terra);font-weight:700}
+  .preco{display:inline-block;margin-left:2px;padding:2px 9px 3px;border-radius:5px;background:#fff;color:var(--terra);font-weight:700}
 
   /* ===== rodapé ===== */
   footer{margin-top:26px;text-align:center}
   .soc{display:flex;justify-content:center;gap:10px}
-  .soc a{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;background:#fff;border:1px solid var(--linha);
-         font-size:11px;font-weight:600;color:var(--verde-esc);transition:transform .2s}
+  .soc a{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:#fff;border:1px solid var(--linha);
+         font-size:13px;font-weight:600;color:var(--verde-esc);transition:transform .2s}
   .soc a:hover{transform:translateY(-1px)}
-  .soc svg{width:14px;height:14px}
-  .local{margin-top:16px;font-size:10.5px;color:var(--cinza)}
-  .copy{margin-top:14px;padding-top:14px;border-top:1px solid var(--linha);font-size:9.5px;line-height:1.7;color:#8d938e}
+  .soc svg{width:17px;height:17px}
+  .local{margin-top:18px;font-size:12.5px;color:var(--cinza)}
+  .copy{margin-top:16px;padding-top:16px;border-top:1px solid var(--linha);font-size:11px;line-height:1.7;color:#8d938e}
   .copy b{color:var(--verde-esc);font-weight:600}
 
   .fade{opacity:0;transform:translateY(10px);animation:in .7s cubic-bezier(.2,.7,.2,1) forwards}
   @keyframes in{to{opacity:1;transform:none}}
   @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1;transform:none}.card,.cta i{transition:none}}
-  @media (max-width:350px){ :root{--pad:15px} .card h2{font-size:20px} .card p{font-size:11px} .txt{width:60%} }
+  @media (max-width:360px){ .card h2{font-size:25px} .card p{font-size:12.5px} .txt{width:60%;padding-left:18px} }
 </style>
 </head>
 <body>
@@ -129,7 +129,7 @@
 
     <a class="card claro c1 fade" style="animation-delay:.1s" target="_blank" rel="noopener"
        href="https://wa.me/557192516213?text=Oi%2C%20Gl%C3%A1ucia!%20Quero%20agendar%20uma%20consulta%20presencial%20em%20Tucano.">
-      <img class="pessoa" src="img/adipometro.webp" alt="" style="--x:186px">
+      <img class="pessoa" src="img/adipometro.webp" alt="" style="--x:236px">
       <span class="veu"></span>
       <div class="txt">
         <span class="kicker">Presencial · Tucano-BA</span>
@@ -152,7 +152,7 @@
         <span class="kicker">5 ebooks práticos</span>
         <h2>Receitas Funcionais</h2>
         <p>Por apenas <span class="preco">R$ 19,99</span></p>
-        <span class="cta">Garantir meus ebooks <i><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9 9 3M4 3h5v5"/></svg></i></span>
+        <span class="cta">Quero os ebooks <i><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9 9 3M4 3h5v5"/></svg></i></span>
       </div>
     </a>
 
@@ -170,12 +170,12 @@
 
     <a class="card claro c4 fade" style="animation-delay:.28s" target="_blank" rel="noopener"
        href="https://wa.me/557192516213?text=Oi%2C%20Gl%C3%A1ucia!%20Quero%20saber%20sobre%20o%20acompanhamento%20em%20sa%C3%BAde%20da%20mulher.">
-      <img class="pessoa" src="img/branco.webp" alt="" style="--x:183px">
+      <img class="pessoa" src="img/branco.webp" alt="" style="--x:228px">
       <span class="veu"></span>
       <div class="txt">
         <span class="kicker">Especialidade</span>
         <h2>Saúde da Mulher</h2>
-        <p><strong>SOP, candidíase, endometriose e menopausa</strong>, com fitoterapia.</p>
+        <p><strong>SOP, candidíase, endometriose</strong> e <strong>menopausa</strong>.</p>
         <span class="cta">Saiba mais <i><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9 9 3M4 3h5v5"/></svg></i></span>
       </div>
     </a>
